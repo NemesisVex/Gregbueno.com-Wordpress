@@ -9,49 +9,54 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php meisakuki_post_thumbnail(); ?>
-
-	<header class="entry-header">
-		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && meisakuki_categorized_blog() ) : ?>
-		<div class="entry-meta">
-			<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'meisakuki' ) ); ?></span>
-		</div><!-- .entry-meta -->
-		<?php
-			endif;
-
-			if ( is_single() ) :
-				the_title( '<h2 class="entry-title">', '</h2>' );
-			else :
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			endif;
-		?>
-
-		<div class="entry-meta">
-			<span class="post-format">
-				<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'gallery' ) ); ?>"><?php echo get_post_format_string( 'gallery' ); ?></a>
-			</span>
-
+	<div class="span-14 append-bottom">
+		<header>
+			<div class="span-14 last source-label">
+				<div class="span-13">
+				<?php
+				if ( is_single() ) :
+					the_title( '<h3 class="source-title">', '</h3>' );
+				else :
+					the_title( '<h3 class="source-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+				endif;
+				?>
+			</div>
+				<div class="span-1 last">
+					<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'gallery' ) ); ?>" title="<?php echo get_post_format_string( 'gallery' ); ?>"><span class="genericon genericon-gallery" /></a>
+				</div>
+			</div>
+			<div class="span-4">
 			<?php meisakuki_posted_on(); ?>
-
+				
+				<ul class="meta">
 			<?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'meisakuki' ), __( '1 Comment', 'meisakuki' ), __( '% Comments', 'meisakuki' ) ); ?></span>
+					<li><?php comments_popup_link( __( 'Leave a comment', 'meisakuki' ), __( '1 Comment', 'meisakuki' ), __( '% Comments', 'meisakuki' ) ); ?>
+			<?php endif; ?></li>
+					<li><?php edit_post_link( __( 'Edit', 'meisakuki' ), '', '' ); ?></li>
+				</ul>
+			</div>
+		</header>
+		<div class="span-10 prepend-top last">
+			<?php if ( is_search() ) : ?>
+			<div class="entry-summary">
+				<?php the_excerpt(); ?>
+			</div><!-- .entry-summary -->
+			<?php else : ?>
+			<div class="entry-content">
+				<?php
+					the_content( __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'meisakuki' ) );
+					wp_link_pages( array(
+						'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'meisakuki' ) . '</span>',
+						'after'       => '</div>',
+						'link_before' => '<span>',
+						'link_after'  => '</span>',
+					) );
+				?>
+			</div><!-- .entry-content -->
 			<?php endif; ?>
 
-			<?php edit_post_link( __( 'Edit', 'meisakuki' ), '<span class="edit-link">', '</span>' ); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
+			<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
 
-	<div class="entry-content">
-		<?php
-			the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'meisakuki' ) );
-			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'meisakuki' ) . '</span>',
-				'after'       => '</div>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
+		</div>
+	</div>
 </article><!-- #post-## -->

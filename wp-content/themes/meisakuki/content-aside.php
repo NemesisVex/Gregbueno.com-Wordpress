@@ -11,9 +11,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="span-14">
+	<div class="span-14 append-bottom">
 		<header>
 			<div class="span-14 last source-label">
+				<div class="span-13">
 				<?php
 				if ( is_single() ) :
 					the_title( '<h3 class="source-title">', '</h3>' );
@@ -22,11 +23,11 @@
 				endif;
 				?>
 			</div>
+				<div class="span-1 last">
+					<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'aside' ) ); ?>" title="<?php echo get_post_format_string( 'aside' ); ?>"><span class="genericon genericon-aside" /> </a>
+				</div>
+			</div>
 			<div class="span-4">
-				<span class="post-format">
-					<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'aside' ) ); ?>"><?php echo get_post_format_string( 'aside' ); ?></a>
-				</span>
-
 			<?php meisakuki_posted_on(); ?>
 				
 				<ul class="meta">
@@ -38,26 +39,26 @@
 			</div>
 		</header>
 		<div class="span-10 prepend-top last">
-	<?php if ( is_search() ) : ?>
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-	<?php else : ?>
-	<div class="entry-content">
-		<?php
-			the_content( __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'meisakuki' ) );
-			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'meisakuki' ) . '</span>',
-				'after'       => '</div>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-	<?php endif; ?>
+			<?php if ( is_search() ) : ?>
+			<div class="entry-summary">
+				<?php the_excerpt(); ?>
+			</div><!-- .entry-summary -->
+			<?php else : ?>
+			<div class="entry-content">
+				<?php
+					the_content( __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'meisakuki' ) );
+					wp_link_pages( array(
+						'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'meisakuki' ) . '</span>',
+						'after'       => '</div>',
+						'link_before' => '<span>',
+						'link_after'  => '</span>',
+					) );
+				?>
+			</div><!-- .entry-content -->
+			<?php endif; ?>
 
-	<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
-			
+			<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
+
 		</div>
 	</div>
 	

@@ -51,9 +51,9 @@ function meisakuki_paging_nav() {
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
 		<h4 class="screen-reader-text"><?php _e( 'Posts navigation', 'meisakuki' ); ?></h4>
-		<div class="pagination loop-pagination">
+		<p class="pagination loop-pagination centered">
 			<?php echo $links; ?>
-		</div><!-- .pagination -->
+		</p><!-- .pagination -->
 	</nav><!-- .navigation -->
 	<?php
 	endif;

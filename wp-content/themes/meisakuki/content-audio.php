@@ -11,20 +11,24 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="span-14">
+	<div class="span-14 append-bottom">
 		<header>
 			<div class="span-14 last source-label">
-				<?php
-				if ( is_single() ) :
-					the_title( '<h3 class="source-title">', '</h3>' );
-				else :
-					the_title( '<h3 class="source-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
-				endif;
-				?>
+				<div class="span-13">
+					<?php
+					if ( is_single() ) :
+						the_title( '<h3 class="source-title">', '</h3>' );
+					else :
+						the_title( '<h3 class="source-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+					endif;
+					?>
+				</div>
+				<div class="span-1 last">
+					<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'audio' ) ); ?>" title="<?php echo get_post_format_string( 'audio' ); ?>"><span class="genericon genericon-audio"></span></a>
+				</div>
 			</div>
 			<div class="span-4">
 				<span class="post-format">
-					<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'audio' ) ); ?>"><?php echo get_post_format_string( 'audio' ); ?></a>
 				</span>
 
 			<?php meisakuki_posted_on(); ?>

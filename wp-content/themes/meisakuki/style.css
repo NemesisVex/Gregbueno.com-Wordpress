@@ -38,6 +38,32 @@ Text Domain: meisakuki
 	border-bottom: 1px solid #253431;
 }
 
+.bypostauthor > article .fn:before,
+.comment-edit-link:before,
+.comment-reply-link:before,
+.comment-reply-login:before,
+.comment-reply-title small a:before,
+.contributor-posts-link:before,
+.menu-toggle:before,
+.search-toggle:before,
+.slider-direction-nav a:before,
+.widget_twentyfourteen_ephemera .widget-title:before {
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font: normal 16px/1 Genericons;
+	text-decoration: inherit;
+	vertical-align: text-bottom;
+}
+
+.comment-edit-link {
+	margin-left: 10px;
+	text-decoration: none;
+}
+
+.comment-edit-link:before {
+	content: "\f411";
+}
+
 .says {
 	display: none;
 }

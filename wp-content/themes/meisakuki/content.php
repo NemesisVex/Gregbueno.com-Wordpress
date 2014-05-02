@@ -11,7 +11,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="span-14">
+	<div class="span-14 append-bottom">
 		<header>
 			<div class="span-14 last source-label">
 				<?php

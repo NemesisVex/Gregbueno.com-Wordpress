@@ -63,8 +63,8 @@ if ( post_password_required() ) {
 	<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
 		<h4 class="screen-reader-text sr-only"><?php _e( 'Comment navigation', 'meisakuki' ); ?></h4>
 		<ul class="pager">
-			<li><div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'meisakuki' ) ); ?></div></li>
-			<li><div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'meisakuki' ) ); ?></div></li>
+			<li><div class="nav-previous"><?php previous_comments_link( __( '&laquo; Older Comments', 'meisakuki' ) ); ?></div></li>
+			<li><div class="nav-next"><?php next_comments_link( __( 'Newer Comments &raquo;', 'meisakuki' ) ); ?></div></li>
 		</ul>
 		
 		
