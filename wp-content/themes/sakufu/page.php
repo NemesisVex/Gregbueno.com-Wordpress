@@ -13,7 +13,7 @@
 
 get_header(); ?>
 
-<div id="main-content" class="main-content col-md-8">
+<div id="main-content" class="main-content">
 
 <?php
 	if ( is_front_page() && sakufu_has_featured_posts() ) {

@@ -19,7 +19,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area col-md-8">
+	<section id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
 			<?php if ( have_posts() ) : ?>

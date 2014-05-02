@@ -41,25 +41,25 @@
 			</div>
 		</header>
 		<div class="span-10 prepend-top last">
-	<?php if ( is_search() ) : ?>
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-	<?php else : ?>
-	<div class="entry-content">
-		<?php
-			the_content( __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'sakufu' ) );
-			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'sakufu' ) . '</span>',
-				'after'       => '</div>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-	<?php endif; ?>
+			<?php if ( is_search() ) : ?>
+			<div class="entry-summary">
+				<?php the_excerpt(); ?>
+			</div><!-- .entry-summary -->
+			<?php else : ?>
+			<div class="entry-content">
+				<?php
+					the_content( __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'sakufu' ) );
+					wp_link_pages( array(
+						'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'sakufu' ) . '</span>',
+						'after'       => '</div>',
+						'link_before' => '<span>',
+						'link_after'  => '</span>',
+					) );
+				?>
+			</div><!-- .entry-content -->
+			<?php endif; ?>
 
-	<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
+			<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
 			
 		</div>
 	</div>
