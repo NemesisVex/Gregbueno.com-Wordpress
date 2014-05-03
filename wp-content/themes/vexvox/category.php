@@ -50,9 +50,9 @@ get_header(); ?>
 				endif;
 			?>
 		</div><!-- #content -->
+		<?php get_sidebar( 'content '); ?>
 	</section><!-- #primary -->
 
 <?php
-get_sidebar( 'content' );
-get_sidebar();
+get_sidebar( 'vexvox' );
 get_footer();
