@@ -7,6 +7,7 @@
  * @since Sakufu 1.0
  */
 
+sakufu_remap_mt();
 get_header(); ?>
 
 
