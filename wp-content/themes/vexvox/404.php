@@ -7,6 +7,7 @@
  * @since VexVox 1.0
  */
 
+vexvox_remap_mt();
 get_header(); ?>
 
 

@@ -7,6 +7,7 @@
  * @since Meisakuki 1.0
  */
 
+meisakuki_remap_mt();
 get_header(); ?>
 
 
