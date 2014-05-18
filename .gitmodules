@@ -1,0 +1,9 @@
+[submodule "wp-content/themes/meisakuki"]
+	path = wp-content/themes/meisakuki
+	url = git@bitbucket.org:NemesisVex/meisakuki-original-theme-for-wordpress.git
+[submodule "wp-content/themes/vexvox"]
+	path = wp-content/themes/vexvox
+	url = git@bitbucket.org:NemesisVex/vexvox-original-theme-for-wordpress.git
+[submodule "wp-content/themes/sakufu"]
+	path = wp-content/themes/sakufu
+	url = git@bitbucket.org:NemesisVex/sakufu-original-theme-for-wordpress.git
