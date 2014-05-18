@@ -1,3 +1,6 @@
 configuration.php
 environment.php
 wp-config.php
+/wp-content/themes/meisakuki/
+/wp-content/themes/sakufu/
+/wp-content/themes/vexvox/
