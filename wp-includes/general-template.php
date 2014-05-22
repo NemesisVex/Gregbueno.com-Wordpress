@@ -2508,7 +2508,7 @@ function paginate_links( $args = '' ) {
 			return $page_links;
 			break;
 		case 'list' :
-			$r .= "<ul class='page-numbers'>\n\t<li>";
+			$r .= "<ul class='page-numbers " . $args['list_class'] . "'>\n\t<li>";
 			$r .= join("</li>\n\t<li>", $page_links);
 			$r .= "</li>\n</ul>\n";
 			break;
