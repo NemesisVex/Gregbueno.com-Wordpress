@@ -2436,7 +2436,8 @@ function paginate_links( $args = '' ) {
 		'add_args' => false, // array of query args to add
 		'add_fragment' => '',
 		'before_page_number' => '',
-		'after_page_number' => ''
+		'after_page_number' => '',
+		'list_class' => '',
 	);
 
 	$args = wp_parse_args( $args, $defaults );
