@@ -2436,8 +2436,7 @@ function paginate_links( $args = '' ) {
 		'add_args' => false, // array of query args to add
 		'add_fragment' => '',
 		'before_page_number' => '',
-		'after_page_number' => '',
-		'list_class' => '',
+		'after_page_number' => ''
 	);
 
 	$args = wp_parse_args( $args, $defaults );
@@ -2508,7 +2507,7 @@ function paginate_links( $args = '' ) {
 			return $page_links;
 			break;
 		case 'list' :
-			$r .= "<ul class='page-numbers " . $args['list_class'] . "'>\n\t<li>";
+			$r .= "<ul class='page-numbers'>\n\t<li>";
 			$r .= join("</li>\n\t<li>", $page_links);
 			$r .= "</li>\n</ul>\n";
 			break;
