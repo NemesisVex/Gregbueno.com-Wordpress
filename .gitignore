@@ -7,6 +7,7 @@ environment.php
 sitemap.xml
 sitemap.xml.gz
 wp-config.php
+wp-config-ddev.php
 wp-content/advanced-cache.php
 wp-content/backup-db/
 wp-content/backups/
@@ -20,6 +21,10 @@ wp-content/sunrise.php
 wp-content/themes/meisakuki/
 wp-content/themes/sakufu/
 wp-content/themes/vexvox/
+wp-content/themes/gregbueno/
 wp-content/upgrade/
 wp-content/uploads/
 wp-content/wp-cache-config.php
+*.sql
+*.sql.gz
+.DS_Store
