@@ -14,4 +14,21 @@ RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*) $2 [L]
 RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ $2 [L]
 RewriteRule . index.php [L]
 
+ErrorDocument 401 default
+
+SetEnvIf Host "^gregbueno\.com" noauth=1
+SetEnvIf Host "www\.gregbueno\.com" noauth=1
+
+AuthType Basic
+AuthGroupFile /dev/null
+AuthUserFile /home/nemesisv/.htpasswd
+AuthName "Gregbueno.com WordPress development site"
+
+<IfModule mod_authz_core.c>
+    <RequireAny>
+        Require env noauth
+        Require valid-user
+    </RequireAny>
+</IfModule>
+
 #END WordPress
